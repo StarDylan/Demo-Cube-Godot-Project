@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cubes.gd" type="Script" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+
+[node name="Node" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Panel" parent="." index="0" instance=ExtResource( 2 )]
+
+margin_left = 163.0
+margin_top = 123.0
+margin_right = 856.0
+margin_bottom = 481.0
+
+[node name="Cubes" type="Node" parent="." index="1"]
+
+script = ExtResource( 3 )
+visible = null
+
+[node name="Player" parent="Cubes" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 57.0196, 72.7907 )
+_sections_unfolded = [ "Pickable", "Visibility" ]
+isPlayer = true
+
+[node name="Cube" parent="Cubes" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 858.384, 46.3168 )
+
+
